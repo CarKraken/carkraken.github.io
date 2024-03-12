@@ -5,7 +5,42 @@
     <div>
         <!--proposition: instead of having a select tag dropdown, use a div and a button;
             when button clicked, change div color + reveal div containing individual equipment + buttons-->
-
+        <!--note for css: make box around each div for clarity-->
+        <div>
+            <h4>Badminton
+                <button type="add">^</button>
+            </h4>
+        </div>
+        <div class="invis_badminton">
+            <!-- figure out php for all these actions-->
+            <form action="/action_page.php">
+                <label for="badminton">Badminton Net</label>
+                <button type="add">+</button>
+                <!-- display value of a variable here-->
+                <button type="subt">-</button>
+            </form>  
+            <br>
+            <form action="/action_page.php">
+                <label for="badminton">Badminton Poles</label>
+                <button type="add">+</button>
+                <!-- display value of a variable here-->
+                <button type="subt">-</button>
+            </form> 
+            <br>
+            <form action="/action_page.php">
+                <label for="badminton">Badminton Raquet</label>
+                <button type="add">+</button>
+                <!-- display value of a variable here-->
+                <button type="subt">-</button>
+            </form>
+            <br>
+            <form action="/action_page.php">
+                <label for="badminton">Badminton Raquet Cover</label>
+                <button type="add">+</button>
+                <!-- display value of a variable here-->
+                <button type="subt">-</button>
+            </form>
+        </div>
 
         <!-- each dropdown on main screen has only one option-->
         <select name="badminton" id="sport_ddown">
