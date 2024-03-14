@@ -11,60 +11,52 @@
                 <button type="add">^</button>
             </h4>
         </div>
-        <div class="invis_badminton">
+        <div class="dropdownSport" id="drpdownBadminton">
             <!-- figure out php for all these actions-->
             <form action="/action_page.php">
                 <label for="badminton">Badminton Net</label>
-                <button type="add">+</button>
+                <button type="button" onclick="shoHid('drpdownBadminton')")>+</button>
                 <!-- display value of a variable here-->
-                <button type="subt">-</button>
+                <button type="button">-</button>
             </form>  
             <br>
             <form action="/action_page.php">
                 <label for="badminton">Badminton Poles</label>
-                <button type="add">+</button>
+                <button type="button">+</button>
                 <!-- display value of a variable here-->
-                <button type="subt">-</button>
+                <button type="button">-</button>
             </form> 
             <br>
             <form action="/action_page.php">
                 <label for="badminton">Badminton Raquet</label>
-                <button type="add">+</button>
+                <button type="button">+</button>
                 <!-- display value of a variable here-->
-                <button type="subt">-</button>
+                <button type="button">-</button>
             </form>
             <br>
             <form action="/action_page.php">
                 <label for="badminton">Badminton Raquet Cover</label>
-                <button type="add">+</button>
+                <button type="button">+</button>
                 <!-- display value of a variable here-->
-                <button type="subt">-</button>
+                <button type="button">-</button>
             </form>
-        </div>
-
-        <!-- each dropdown on main screen has only one option-->
-        <select name="badminton" id="sport_ddown">
-        <option value="one">
-            <div>
-                <p> Badminton Net
-                    <!-- figure out php for all these actions-->
-                    <form action="/action_page.php">
-                        <button type="add">+</button>
-                        <!-- display value of a variable here-->
-                        <button type="subt">-</button>
-                    </form>                        
-                    <br>
-                    Badminton Poles
-                    <br>
-                    Badminton Raquet
-                    <br>
-                    Badminton Raquet Cover
-                </p>
-            </div>
-        </option>
-        </select>
-        <br><br>                    
+        </div>                    
     </div>
+
+
+<!--SCRIPT HERE-->>
+<script>
+function shoHid(drpId){
+    <!--div w/ id “drpdown” -->
+    var plchold = document.getElementById(drpId);
+    if (plchold.style.display === "none") {
+        plchold.style.display = "block";
+    } else {
+        //sets div to hidden
+        plchold.style.display = "none";
+    }
+}
+</script>        
 
 </body>
 </html>
