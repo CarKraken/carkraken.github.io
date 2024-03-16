@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="varInText(equipName)">
 
     <div>
         <!--proposition: instead of having a select tag dropdown, use a div and a button;
@@ -8,17 +8,17 @@
         <!--note for css: make box around each div for clarity-->
         <div>
             <h4>Badminton
-                <button type="add">^</button>
+                <button type="button" onclick="shoHid('drpdownBadminton')">^</button>
             </h4>
         </div>
         <div class="dropdownSport" id="drpdownBadminton">
             <!-- figure out php for all these actions-->
-            <form action="/action_page.php">
-                <label for="badminton">Badminton Net</label>
-                <button type="button" onclick="shoHid('drpdownBadminton')")>+</button>
-                <!-- display value of a variable here-->
-                <button type="button">-</button>
-            </form>  
+            <label for="badminton">Badminton Net</label>
+            <button type="button" onclick="incValue('addBadmintonNet')">+</button>
+            <script type="text/javascript">
+                document.write(BadmintonNet)
+              </script>
+            <button type="button">-</button> 
             <br>
             <form action="/action_page.php">
                 <label for="badminton">Badminton Poles</label>
@@ -46,6 +46,8 @@
 
 <!--SCRIPT HERE-->>
 <script>
+
+//FUNCTIONS HERE
 function shoHid(drpId){
     <!--div w/ id “drpdown” -->
     var plchold = document.getElementById(drpId);
@@ -56,6 +58,23 @@ function shoHid(drpId){
         plchold.style.display = "none";
     }
 }
+
+function incValue(equipName){
+    if(equipName.substring(2)=="add"){
+        //how to get variable name from string? eg. if addBadmintonNet == equipName, how to increment var BadmintonNet
+        //varequipName++
+    }else if(equipName.substring(2)=="sub"){
+        //varequipName--
+    }
+}
+
+function varInText(equipName) {
+    //EDIT: how to have this in body (so, whole page), but have diff variable show for each equipment type?
+      document.getElementById(equipName).innerHTML = BadmintonNet;
+    }//in html: <h1>"The value for number is: " <span id="myText"></span></h1>
+
+//VARIABLES HERE
+var BadmintonNet = 0
 </script>        
 
 </body>
