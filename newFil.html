@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form name="locations" action="javascript:;" onsubmit="setLoc()">
+        <label for="locations">Select a LPF Location:</label>
+        
+        <select name="locations" id=”locations">
+            <option value="null">--Choose a Location--</option>
+            <option value="bmore">Baltimore, MD</option>
+            <option value="philly">Philadelphia, PA</option>
+            <option value="dc">Washington, DC</option>
+            <option value="west_ny">Western New York</option>
+            <option value="ohio">Ohio</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+        <p>Location chosen: 
+            <script type="text/javascript">
+            document.write(logLoc)
+          </script></p>
+
+    </body>
+    </html>
+
+ <script>
+//not working rn
+function setLoc() {
+    var logLoc = document.forms["locations"].value;
+    if (logLoc == "null"){
+        logLoc = "Location not selected. Please choose a location."
+    }
+}
+    </script>

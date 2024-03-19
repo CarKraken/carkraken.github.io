@@ -7,16 +7,13 @@
     </h1>
     <p></p>
 
-    <!--what is form action?
-    "If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php"."-->
-
-    <form action="/action_page.php">
+    <form action="javascript:;" onsubmit=" normSignIn(box_input)">
         <input type="password" placeholder="Type Password Here">
         <br>
         <input type="submit" value = "Sign-In">
     </form>
-    <p></p>
-    <form action="/action_page.php">
+    <p id="divId">Error. Password Incorrect.</p>
+    <form action="javascript:;" onsubmit=" adminSignIn(adminbox_input)">
         <input type="password" placeholder="Type Admin Password Here /t">
         <br>
         <input type="submit" value = "Sign-In">
@@ -24,3 +21,22 @@
 
 </body>
 </html>
+
+<!--SCRIPT HERE-->>
+<script>
+
+//FUNCTIONS HERE
+function normSignIn(inpt, divId){
+    //temp password is "volunteer"
+    if(inpt == "volunteer"){
+        window.location.href = "main_sc.html";
+    }else{
+        var plchold = document.getElementById(divId);
+        plchold.style.display = "none";
+    }
+}
+
+function adminSignIn(inpt){
+
+}
+</script>
