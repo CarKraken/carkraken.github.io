@@ -15,10 +15,7 @@
         <br><br>
         <input type="submit" value="Submit">
     </form>
-        <p>Location chosen: 
-            <script type="text/javascript">
-            document.write(logLoc)
-          </script></p>
+        <p id="test">Location chosen: </p>
 
     </body>
     </html>
@@ -29,6 +26,10 @@ function setLoc() {
     var logLoc = document.forms["locations"].value;
     if (logLoc == "null"){
         logLoc = "Location not selected. Please choose a location."
+    }
+    else{
+        //displays within a tag w/ given id. still not able to display variables
+        document.getElementById("test").innerHTML = logLoc;
     }
 }
     </script>

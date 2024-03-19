@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<body onload="varInText(equipName)">
+<body>
+    <!--need in body tag?: onload="varInText(equipName)"-->
 
     <div>
         <!--proposition: instead of having a select tag dropdown, use a div and a button;
@@ -68,6 +69,7 @@ function incValue(equipName){
     }
 }
 
+//where to call? has to be in body? wouldn't work 
 function varInText(equipName) {
     //EDIT: how to have this in body (so, whole page), but have diff variable show for each equipment type?
       document.getElementById(equipName).innerHTML = BadmintonNet;
