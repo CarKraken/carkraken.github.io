@@ -16,12 +16,14 @@
             <!-- figure out php for all these actions-->
             <label for="badminton">Badminton Net</label>
             <button type="button" onclick="incValue('addBadmintonNet')">+</button>
-            <script type="text/javascript">
-                //don't use write i think
-                document.write(BadmintonNet)
-              </script>
+            <p id="test"></p>
+            <script>
+                document.getElementById("test").innerHTML = BadmintonNet;
+            </script>
             <button type="button">-</button> 
+
             <br>
+            
             <form action="/action_page.php">
                 <label for="badminton">Badminton Poles</label>
                 <button type="button">+</button>
@@ -63,12 +65,11 @@ function shoHid(drpId){
 }
 
 function incValue(equipName){
-    if(equipName.substring(2)=="add"){
-        //how to get variable name from string? eg. if addBadmintonNet == equipName, how to increment var BadmintonNet
-        //varequipName++
-    }else if(equipName.substring(2)=="sub"){
-        //varequipName--
-    }
+    equipName++
+}
+
+function decValue(equipName){
+    equipName++
 }
 
 //where to call? has to be in body? wouldn't work 
