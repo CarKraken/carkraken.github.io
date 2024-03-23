@@ -17,6 +17,7 @@
             <label for="badminton">Badminton Net</label>
             <button type="button" onclick="incValue('addBadmintonNet')">+</button>
             <!--need <p>?-->
+<!--EDIT HERE: figure out innerHTML-->
             <p id="test"></p>
             <script>
                 document.getElementById("test").innerHTML = BadmintonNet;
@@ -73,10 +74,11 @@ function decValue(equipName){
     equipName++
 }
 
-//where to call? has to be in body? wouldn't work 
+//where to call? has to be in body? wouldn't work
+//EDIT: have multiple lines running this ie. conflicting. change
 function varInText(equipName) {
     //EDIT: how to have this in body (so, whole page), but have diff variable show for each equipment type?
-      document.getElementById(equipName).innerHTML = BadmintonNet;
+    document.getElementById(equipName).innerHTML = BadmintonNet;
     }//in html: <h1>"The value for number is: " <span id="myText"></span></h1>
 
 //VARIABLES HERE
