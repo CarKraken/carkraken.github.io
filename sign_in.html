@@ -30,17 +30,16 @@
 
 function setHide(){
     var plce = document.getElementById(divHid);
-    plce.style.display = "block";
+    plce.style.display = "none";
 }
 
 function normSignIn(inpt, divId){
     //temp password is "volunteer"
     if(inpt == "volunteer"){
-        //get git pages working to test i think
-        window.location.href = "main_sc.html";
+        window.location.replace("main_sc.html");
     }else{
         var plchold = document.getElementById(divId);
-        plchold.style.display = "none";
+        plchold.style.display = "block";
     }
 }
 
