@@ -8,7 +8,7 @@
     <p></p>
 
 <!--FIX: form submit. then rest'll fix-->
-    <form action="javascript:;" onsubmit=" normSignIn(box_input, divHid)">
+    <form action="" onsubmit=" normSignIn(box_input, divHid)">
         <input type="password" placeholder="Type Password Here">
         <br>
         <input type="submit" value = "Sign-In">
@@ -36,7 +36,7 @@ function setHide(divId){
 
 function normSignIn(inpt, divId){
     //temp password is "volunteer"
-    if(inpt == "volunteer"){
+    if(inpt.value == "volunteer"){
         window.location.replace("main_sc.html");
     }else{
         var plchold = document.getElementById(divId);
