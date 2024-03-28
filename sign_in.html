@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body onload="setHide()">
+<body onload="setHide(divHid)">
 
     <h1>
         Leveling the Playing Field Donation Logs
@@ -28,8 +28,8 @@
 
 //FUNCTIONS HERE
 
-function setHide(){
-    var plce = document.getElementById(divHid);
+function setHide(divId){
+    var plce = document.getElementById(divId);
     plce.style.display = "none";
 }
 
