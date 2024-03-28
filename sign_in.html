@@ -8,11 +8,12 @@
     <p></p>
 
 <!--FIX: form submit. then rest'll fix-->
-    <form action="" onsubmit=" normSignIn(box_input, divHid)">
-        <input type="password" placeholder="Type Password Here">
+    <form action="" id="signIn1">
+        <input type="password" id = "normpw" placeholder="Type Password Here">
         <br>
-        <input type="submit" value = "Sign-In">
+        <button type="submit">Sign-In</button>
     </form>
+
     <!--check: set to hide on load?-->
     <p id="divHid">Error. Password Incorrect.</p>
     <form action="javascript:;" onsubmit=" adminSignIn(adminbox_input)">
@@ -20,6 +21,8 @@
         <br>
         <input type="submit" value = "Sign-In">
     </form>
+
+    <button type="button" onclick="changeScrnTest()">Test win.loc.replace</button>
 
 </body>
 </html>
@@ -34,8 +37,25 @@ function setHide(divId){
     plce.style.display = "none";
 }
 
-function normSignIn(inpt, divId){
+function changeScrnTest(){
+    window.location.replace("index.html");
+}
+
+signIn1.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let inpt = document.getElementById("normpw");
+    if(inpt.value == "volunteer"){
+        window.location.replace("main_sc.html");
+    }else{
+        var plchold = document.getElementById(divId);
+        plchold.style.display = "block";
+    }
+});
+
+function normSignIn(divId){
     //temp password is "volunteer"
+    let inpt = document.getElementById("normpw");
     if(inpt.value == "volunteer"){
         window.location.replace("main_sc.html");
     }else{
