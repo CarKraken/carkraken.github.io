@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <form name="locations" action="javascript:;" onsubmit="setLoc()">
+    <form id="locations" action="" onsubmit="setLoc()">
         <label for="locations">Select a LPF Location:</label>
         
-        <select name="locations" id="locations">
+        <select name="locations">
             <option value="null">--Choose a Location--</option>
             <option value="bmore">Baltimore, MD</option>
             <option value="philly">Philadelphia, PA</option>
@@ -16,6 +16,7 @@
         <input type="submit" value="Submit">
     </form>
         <p id="test">Location chosen: </p>
+        <p id="hidTst">hide me to work</p>
 
     </body>
     </html>
@@ -23,13 +24,16 @@
  <script>
 //not working rn
 function setLoc() {
-    var logLoc = document.forms["locations"].value;
+    //var logLoc = document.forms["locations"].value;
+    var logLog = documnet.forms.namedItem("locations").innerHTML
     if (logLoc == "null"){
         logLoc = "Location not selected. Please choose a location."
     }
     else{
         //displays within a tag w/ given id. still not able to display variables
         document.getElementById("test").innerHTML = logLoc;
+        var plchold = document.getElementById("hidTst");
+        plchold.style.display = "block";
     }
 }
     </script>
