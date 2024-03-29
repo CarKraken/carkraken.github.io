@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body onload="setHide(divHid)">
+<body>
 
     <h1>
         Leveling the Playing Field Donation Logs
@@ -16,7 +16,7 @@
     <p>Use password "volunteer" in box above</p>
 
     <!--check: set to hide on load?-->
-    <p id="divHid" style="display:none">Error. Password Incorrect.</p>
+    <p id="err" style="display:none">Error. Password Incorrect.</p>
 
 </body>
 </html>
@@ -25,12 +25,6 @@
 <script>
 
 //FUNCTIONS HERE
-<!--none of fxns work. check form-->
-function setHide(divId){
-    var plce = document.getElementById(divId);
-    plce.style.display = "none";
-}
-
 signIn1.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -38,7 +32,7 @@ signIn1.addEventListener("submit", (e) => {
     if(inpt.value == "volunteer"){
         window.location.replace("main_sc.html");
     }else{
-        var plchold = document.getElementById(divId);
+        var plchold = document.getElementById("err");
         plchold.style.display = "block";
     }
 });
