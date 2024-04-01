@@ -17,18 +17,13 @@
             </h4>
         </div>
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
-            <!-- figure out php for all these actions-->
-            <label for="badminton">Badminton Net</label>
-            <button type="button" onclick="incValue('addBadmintonNet')">+</button>
-            <!--need <p>?-->
-<!--EDIT HERE: figure out innerHTML-->
-            <p id="test"></p>
-            <script>
-                document.getElementById("test").innerHTML = BadmintonNet;
-            </script>
-            <button type="button">-</button> 
-
-            <br>
+            
+            <div>
+                <label for="badminton">Badminton Net</label>
+                <button type="button" onclick="incValue('BadmintonNet')" style="display:inline-block">+</button>
+                <p id="bmn_nt" style="display:inline-block"></p>
+                <button type="button" style="display:inline-block">-</button> 
+            </div>
 
             <form action="/action_page.php">
                 <label for="badminton">Badminton Poles</label>
@@ -71,6 +66,7 @@ function shoHid(drpId){
     }
 }
 
+//test what this actually does
 function incValue(equipName){
     equipName++
 }
@@ -88,6 +84,9 @@ function varInText(equipName) {
 
 //VARIABLES HERE
 var BadmintonNet = 0
+
+//code to display js variables in html
+document.getElementById("bmn_nt").innerHTML = String(BadmintonNet);
 
 //put all the variables in an array so I can iterate through them!! :0
 </script>        
