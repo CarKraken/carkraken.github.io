@@ -3,7 +3,22 @@
 <body>
     <a href="main_sc.html">Back</a>
 
-    <form id="locations" action="" onsubmit="setLoc()">
+    <form action="" id="collectionInfo">
+        <label for="colName">Collection Name:</label>
+        <input type="text" id = "colName" placeholder="Collection Name">
+        <br>
+        <label for="colDate">Collection Date:</label>
+        <input type="date" id = "colDate" placeholder="Collection Date">
+        <br>
+        <label for="boxNum">Box Number:</label>
+        <input type="number" id = "boxNum" step="1" min="1">
+        <br><br>
+        <button type="submit">Save</button>
+    </form>
+    <br><br>
+
+    <!--not working; issue w/ intake of input-->
+    <form id="locations" action="">
         <label for="locations">Select a LPF Location:</label>
         
         <select name="locations">
@@ -15,29 +30,38 @@
             <option value="ohio">Ohio</option>
         </select>
         <br><br>
-        <input type="submit" value="Submit">
+        <button type="submit">Save</button>
     </form>
 
         <!--<p id="test">Location chosen: </p>-->
-        <!--<p id="hidTst">hide me to work</p>-->
+        <!--<p id="hidTst" style="display:block">hide me to work</p>-->
 
     </body>
     </html>
 
  <script>
 //not working rn
-function setLoc() {
+locations.addEventListener("submit", (e) => {
+    e.preventDefault();
 //FIX: how to get value from form?
     //var logLoc = document.forms["locations"].value;
-    var logLog = documnet.forms.namedItem("locations").innerHTML
+    var logLog = document.forms.namedItem("locations").innerHTML;
     if (logLoc == "null"){
         logLoc = "Location not selected. Please choose a location."
     }
     else{
-        //displays within a tag w/ given id. still not able to display variables
+        //displays within a tag w/ given id. still not able to display variables. figure out display in order to test
         document.getElementById("test").innerHTML = logLoc;
+        //successfully hides
         var plchold = document.getElementById("hidTst");
-        plchold.style.display = "block";
+        plchold.style.display = "none";
     }
-}
+});
+
+collectionInfo.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let collection_name = document.getElementById("colName").value;
+    let collection_date = document.getElementById("colDate").value;
+    let box_number = document.getElementById("boxNum").value;
+});
     </script>
