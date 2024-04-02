@@ -46,6 +46,8 @@
         </div>
         <p>click on carrot to show/collapse dropdown</p>                    
     </div>
+
+    <p id ="incValTest"></p>
 </body>
 </html>
 
@@ -64,22 +66,23 @@ function shoHid(drpId){
     }
 }
 
+//need a function for each equipment type??
 //FIX - doesn't work
 function incValue(equipName){
-    //find index pos, find variable at index, increment this variable
-    allEquipmentTypesArray.find(equipName)
+    equipName++;
+    document.getElementById("incValTest").innerHTML = String(equipName);
 }
+
+//find index pos, find variable at index, increment this variable
+    //how to serch for variable, not variable value?
+    //indx = allEquipmentTypesArray.indexOf(equipName);
+    //document.getElementById("incValTest").innerHTML = String(indx);
+    //allEquipmentTypesArray[indx]++;
+    //document.getElementById("incValTest2").innerHTML = String(allEquipmentTypesArray[indx]);
 
 function decValue(equipName){
     equipName++
 }
-
-//where to call? has to be in body? wouldn't work
-//EDIT: have multiple lines running this ie. conflicting. change
-function varInText(equipName) {
-    //EDIT: how to have this in body (so, whole page), but have diff variable show for each equipment type?
-    document.getElementById(equipName).innerHTML = BadmintonNet;
-    }//in html: <h1>"The value for number is: " <span id="myText"></span></h1>
 
 //VARIABLES HERE
 var BadmintonNet = 0
