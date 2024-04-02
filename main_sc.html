@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <!--need in body tag?: onload="varInText(equipName)"-->
     <div>
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF location</a>
@@ -17,7 +16,6 @@
             </h4>
         </div>
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
-            
             <div>
                 <label for="badminton">Badminton Net</label>
                 <button type="button" onclick="incValue('BadmintonNet')" style="display:inline-block">+</button>
@@ -66,9 +64,10 @@ function shoHid(drpId){
     }
 }
 
-//test what this actually does
+//FIX - doesn't work
 function incValue(equipName){
-    equipName++
+    //find index pos, find variable at index, increment this variable
+    allEquipmentTypesArray.find(equipName)
 }
 
 function decValue(equipName){
@@ -89,5 +88,6 @@ var BadmintonNet = 0
 document.getElementById("bmn_nt").innerHTML = String(BadmintonNet);
 
 //put all the variables in an array so I can iterate through them!! :0
+const allEquipmentTypesArray = [BadmintonNet, BadmintonPoles];
 </script>        
 
