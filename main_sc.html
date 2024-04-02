@@ -18,7 +18,7 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" onclick="incVal()" style="display:inline-block">+</button>
+                <button type="button" style="display:inline-block" onclick="incVal(BadmintonNet)">+</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
                 <button type="button" style="display:inline-block">-</button> 
             </div>
@@ -48,6 +48,9 @@
     </div>
 
     <p id ="incValTest"></p>
+
+    <!--use to send spreadsheet to LPF-->
+    <!--a href="mailto:someone@example.com">Send email</a>-->
 </body>
 </html>
 
@@ -68,9 +71,8 @@ function shoHid(drpId){
 
 //need a function for each equipment type??
 //FIX - doesn't work
-function incVal(){
-    BadmintonNet+=1;
-    document.getElementById("incValTest").innerHTML = String(BadmintonNet);
+function incVal(equipmentName){
+    allEquipmentTypesArray["equipmentName"]++;
 }
 
 //find index pos, find variable at index, increment this variable
@@ -84,13 +86,10 @@ function decValue(equipName){
     equipName++
 }
 
-//VARIABLES HERE
-var BadmintonNet = 0
+//put all the variables in an array so I can iterate through them!! :0
+const allEquipmentTypesArray = {BadmintonNet:0, BadmintonPoles:0};
 
 //code to display js variables in html
-document.getElementById("bmn_nt").innerHTML = String(BadmintonNet);
-
-//put all the variables in an array so I can iterate through them!! :0
-const allEquipmentTypesArray = [BadmintonNet, BadmintonPoles];
+document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray["BadmintonNet"]);
 </script>        
 
