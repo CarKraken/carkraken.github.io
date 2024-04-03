@@ -18,9 +18,9 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" onclick="incValBmNet()" style="display:inline-block">+</button>
+                <button type="button" onclick="decValBmNet()" style="display:inline-block">-</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
-                <button type="button" onclick="decValBmNet()" style="display:inline-block">-</button> 
+                <button type="button" onclick="incValBmNet()" style="display:inline-block">+</button>
             </div>
 
             <form action="/action_page.php">
@@ -74,8 +74,10 @@ function incValBmNet(){
 }
 
 function decValBmNet(){
-    allEquipmentTypesArray.BadmintonNet--;
-    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+    if(allEquipmentTypesArray.BadmintonNet >= 0){
+      allEquipmentTypesArray.BadmintonNet--;
+    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;  
+    } 
 }
 
 //idid doesn't work. yet to test equipmentType
