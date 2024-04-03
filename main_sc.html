@@ -18,7 +18,7 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" onclick="incVal(BadmintonNet, bmn_nt)" style="display:inline-block">+</button>
+                <button type="button" onclick="incVal(BadmintonNet, 'bmn_nt')" style="display:inline-block">+</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
                 <button type="button" style="display:inline-block">-</button> 
             </div>
@@ -74,6 +74,7 @@ function incValBmNet(){
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
 }
 
+//idid doesn't work
 function incVal(equipmentType, idid){
     allEquipmentTypesArray.equipmentType++;
     document.getElementById(idid).innerHTML = "testidid";
