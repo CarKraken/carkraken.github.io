@@ -18,9 +18,9 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" onclick='incVal(BadmintonNet, "bmn_nt")' style="display:inline-block">+</button>
+                <button type="button" onclick="incValBmNet()" style="display:inline-block">+</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
-                <button type="button" style="display:inline-block">-</button> 
+                <button type="button" onclick="decValBmNet()" style="display:inline-block">-</button> 
             </div>
 
             <form action="/action_page.php">
@@ -68,13 +68,17 @@ function shoHid(drpId){
 }
 
 //need a function for each equipment type??
-//FIX - doesn't work
 function incValBmNet(){
     allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
 }
 
-//idid doesn't work
+function decValBmNet(){
+    allEquipmentTypesArray.BadmintonNet--;
+    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+}
+
+//idid doesn't work. yet to test equipmentType
 function incVal(equipmentType, idid){
     allEquipmentTypesArray.equipmentType++;
     document.getElementById(idid).innerHTML = "testidid";
@@ -87,8 +91,8 @@ function incVal(equipmentType, idid){
     //allEquipmentTypesArray[indx]++;
     //document.getElementById("incValTest2").innerHTML = String(allEquipmentTypesArray[indx]);
 
-function decValue(equipName){
-    equipName++
+function saveCompleteLog(){
+    //iterate through object to create string to export as CSV
 }
 
 //put all the variables in an array so I can iterate through them!! :0
