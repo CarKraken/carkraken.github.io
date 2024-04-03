@@ -3,7 +3,7 @@
 <body>
     <div>
         <!--have "save log" buttons here!-->
-        <a href="newFil.html">Click here to select LPF location</a>
+        <a href="newFil.html">Click here to select LPF Location</a>
     </div>
 
     <div>
@@ -18,7 +18,7 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" style="display:inline-block" onclick="incVal(BadmintonNet)">+</button>
+                <button type="button" onclick="incVal(BadmintonNet)" style="display:inline-block">+</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
                 <button type="button" style="display:inline-block">-</button> 
             </div>
@@ -91,6 +91,6 @@ function decValue(equipName){
 const allEquipmentTypesArray = {BadmintonNet:0, BadmintonPoles:0};
 
 //code to display js variables in html
-document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray["BadmintonNet"]);
+document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray[BadmintonNet]);
 </script>        
 
