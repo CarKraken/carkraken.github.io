@@ -45,7 +45,7 @@ locations.addEventListener("submit", (e) => {
     e.preventDefault();
 //FIX: how to get value from form?
     //var logLoc = document.forms["locations"].value;
-    var logLog = document.forms.namedItem("locations").innerHTML;
+    var logLoc = document.forms.namedItem("locations").innerHTML;
     if (logLoc == "null"){
         logLoc = "Location not selected. Please choose a location."
     }
