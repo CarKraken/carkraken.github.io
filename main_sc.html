@@ -72,8 +72,8 @@ function shoHid(drpId){
 //need a function for each equipment type??
 //FIX - doesn't work
 function incVal(equipmentName){
-    allEquipmentTypesArray[BadmintonNet]++;
-    document.getElementById("incValTest").innerHTML = String(allEquipmentTypesArray[BadmintonNet]);
+    allEquipmentTypesArray.BadmintonNet++;
+    document.getElementById("incValTest").innerHTML = String(allEquipmentTypesArray.BadmintonNet);
 }
 
 //find index pos, find variable at index, increment this variable
@@ -91,6 +91,6 @@ function decValue(equipName){
 const allEquipmentTypesArray = {BadmintonNet:0, BadmintonPoles:0};
 
 //code to display js variables in html
-document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray[BadmintonNet]);
+document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray.BadmintonNet);
 </script>        
 
