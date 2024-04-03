@@ -18,7 +18,7 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" onclick="incVal()" style="display:inline-block">+</button>
+                <button type="button" onclick="incVal(BadmintonNet, bmn_nt)" style="display:inline-block">+</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
                 <button type="button" style="display:inline-block">-</button> 
             </div>
@@ -69,9 +69,14 @@ function shoHid(drpId){
 
 //need a function for each equipment type??
 //FIX - doesn't work
-function incVal(){
+function incValBmNet(){
     allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+}
+
+function incVal(equipmentType, idid){
+    allEquipmentTypesArray.equipmentType++;
+    document.getElementById(idid).innerHTML = allEquipmentTypesArray.equipmentType;
 }
 
 //find index pos, find variable at index, increment this variable
