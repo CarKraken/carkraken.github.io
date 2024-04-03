@@ -18,7 +18,7 @@
         <div class="dropdownSport" id="drpdownBadminton" style="display:none">
             <div>
                 <label for="badminton">Badminton Net</label>
-                <button type="button" onclick="incVal(BadmintonNet)" style="display:inline-block">+</button>
+                <button type="button" onclick="incVal()" style="display:inline-block">+</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
                 <button type="button" style="display:inline-block">-</button> 
             </div>
@@ -71,7 +71,7 @@ function shoHid(drpId){
 
 //need a function for each equipment type??
 //FIX - doesn't work
-function incVal(equipmentName){
+function incVal(){
     allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("incValTest").innerHTML = "program gets into incVal";
 }
