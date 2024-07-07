@@ -1,1 +1,1 @@
-var uni = "assign Me";
+var uni = 0;
