@@ -20,6 +20,7 @@
                 <label for="badminton">Badminton Net</label>
                 <button type="button" onclick="decValBmNet()" style="display:inline-block">-</button>
                 <p id="bmn_nt" style="display:inline-block"></p>
+                <p id="uniCheck" style="display:inline-block">change this</p>
                 <button type="button" onclick="incValBmNet()" style="display:inline-block">+</button>
             </div>
 
@@ -71,6 +72,10 @@ function shoHid(drpId){
 function incValBmNet(){
     allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+    //js test
+    uni = "successful edit"
+    //ugh how to display to check
+    document.getElementById("uniCheck").innerHTML = uni;
 }
 
 function decValBmNet(){
