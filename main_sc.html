@@ -77,11 +77,6 @@ function shoHid(drpId){
 function incValBmNet(){
     allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
-    //js test
-    // chnaged var to "univ" to make sure it isnt just creating a new variable
-    uni++;
-    //ugh how to display; doesn't work
-    document.getElementById("uniCheck").innerHTML = uni;
 }
 
 function decValBmNet(){
@@ -108,8 +103,7 @@ function saveCompleteLog(){
     //iterate through object to create string to export as CSV
 }
 
-//put all the variables in an array so I can iterate through them!! :0
-const allEquipmentTypesArray = {BadmintonNet:0, BadmintonPoles:0};
+//see sepFil for array of equipment
 
 //code to display js variables in html
 document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray.BadmintonNet);

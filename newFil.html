@@ -3,6 +3,8 @@
 <body>
     <a href="main_sc.html">Continue</a>
 
+    <p id="newPgTest">Test</p>
+
     <form action="" id="collectionInfo">
         <label for="colName">Collection Name:</label>
         <input type="text" id = "colName" placeholder="Collection Name">
@@ -65,4 +67,7 @@ collectionInfo.addEventListener("submit", (e) => {
     let collection_date = document.getElementById("colDate").value;
     let box_number = document.getElementById("boxNum").value;
 });
+
+//code to display js variables in html
+document.getElementById("newPgTest").innerHTML = String(allEquipmentTypesArray.BadmintonNet);
     </script>
