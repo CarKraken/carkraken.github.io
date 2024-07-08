@@ -72,10 +72,10 @@ function shoHid(drpId){
     }
 }
 
+//FIX: still doesn't save changes when navigates to new page
 //need a function for each equipment type??
 function incValBmNet(){
-    allEquipmentTypesArray.BadmintonNet = allEquipmentTypesArray.BadmintonNet + 1;
-    //allEquipmentTypesArray.BadmintonNet++;
+    allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
 }
 
