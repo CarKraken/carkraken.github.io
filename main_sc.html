@@ -74,7 +74,8 @@ function shoHid(drpId){
 
 //need a function for each equipment type??
 function incValBmNet(){
-    allEquipmentTypesArray.BadmintonNet++;
+    allEquipmentTypesArray.BadmintonNet = allEquipmentTypesArray.BadmintonNet + 1;
+    //allEquipmentTypesArray.BadmintonNet++;
     document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
 }
 
