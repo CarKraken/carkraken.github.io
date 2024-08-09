@@ -13,7 +13,7 @@
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
         <button type="button" onclick="testLocStr()">Test Locstr</button>
-        <p>Did I update?: 2</p>
+        <p>Did I update?: 3</p>
     </div>
 
     <div>
@@ -98,6 +98,10 @@ function testLocStr(){
     //change js badPol to 1 on the off chance that that's the issue?
     //localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
     document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
+
+    //button should +1 both equipment types
+    allEquipmentTypesArray.BadmintonNet++;
+    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
 }
 
 //need a function for each equipment type??
