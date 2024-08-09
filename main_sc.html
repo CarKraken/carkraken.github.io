@@ -9,7 +9,7 @@
     <div>
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
-        <p id="teest"></p>
+        <p id="teest" style="display:inline-block">starting text</p>
         <button type="button" onclick="testLocStr()" style="display:inline-block">Test Locstr</button>
     </div>
 
@@ -30,12 +30,12 @@
                 <button type="button" onclick="incValBmNet()" style="display:inline-block">+</button>
             </div>
 
-            <form action="/action_page.php">
+            <div>
                 <label for="badminton">Badminton Poles</label>
-                <button type="button">+</button>
-                <p id="bmn_pl" style="display:inline-block"></p>
                 <button type="button">-</button>
-            </form> 
+                <p id="bmn_pl" style="display:inline-block"></p>
+                <button type="button">+</button>
+            </div> 
             <br>
             <form action="/action_page.php">
                 <label for="badminton">Badminton Raquet</label>
@@ -113,11 +113,10 @@ function saveCompleteLog(){
 //see sepFil for array of equipment
 
 
-document.getElementById("teest").innerHTML = "starting text";
 document.getElementById("bmn_pl").innerHTML = "fxn doesn't work";
 
 //if doesn't work, try allEquipmentTypesArray.BadmintonNet[]
-//code to display js variables in html
-//document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray.BadmintonNet);
+//code to initially display js variables in html
+document.getElementById("bmn_nt").innerHTML = String(allEquipmentTypesArray.BadmintonNet);
 </script>        
 
