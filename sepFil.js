@@ -9,4 +9,3 @@ const allEquipmentTypesArray = {
 //"integer keys are automatically converted to strings" - must turn into int to increment?
 //try incremement allEquipArray while on main_sc and setItem to its array counterpart in same fxn
 localStorage.setItem("badPol", "0");
-//localStorage.getItem("locStr")
