@@ -76,9 +76,8 @@ function shoHid(drpId){
 
 function testLocStr(){
     //convert to int then add 1
-    //localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
-    //FIX: not working
-    //document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
+    localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
+    document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 }
 
 //need a function for each equipment type??
