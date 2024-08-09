@@ -6,6 +6,9 @@
         </script>
     </head>
 <body>
+    <!--NOTE: newFil and mainSc could be the same doc, then wouldn't need local storage, BUT
+    //need to figure out how to ask user to save before they leave page-->
+
     <div>
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
@@ -74,7 +77,19 @@ function shoHid(drpId){
     }
 }
 
-//if still doesn't work, test to make sure is getting into fxn
+//code for asking user to save 
+//set needToConfirm to false when user saves log (should also reset all variables in local storage)
+var needToConfirm = true;
+
+window.onbeforeunload = confirmExit;
+function confirmExit()
+{
+    if (needToConfirm){
+        return "Please save the log as either finished or unfinished before leaving this page.";
+    }
+}
+
+//FIX: if still doesn't work, test to make sure is getting into fxn
 function testLocStr(){
     //ALT: get val from element w/ ID bmn_pl and set locStr to that val + 1
     localStorage.setItem("badPol") = document.getElementById("bmn_pl");
