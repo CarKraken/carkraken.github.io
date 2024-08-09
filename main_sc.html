@@ -83,8 +83,7 @@ function testLocStr(){
 //need a function for each equipment type??
 function incValBmNet(){
     allEquipmentTypesArray.BadmintonNet++;
-    //commented out to test if this was doing enything at all
-    //document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
 }
 
 function decValBmNet(){
@@ -112,6 +111,10 @@ function saveCompleteLog(){
 }
 
 //see sepFil for array of equipment
+
+
+document.getElementById("teest").innerHTML = "starting text";
+document.getElementById("bmn_pl").innerHTML = "fxn doesn't work";
 
 //if doesn't work, try allEquipmentTypesArray.BadmintonNet[]
 //code to display js variables in html
