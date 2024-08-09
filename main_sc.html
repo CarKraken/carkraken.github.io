@@ -9,7 +9,7 @@
     <div>
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
-        <button type="button" onclick="testLocStr()" style="display:inline-block">Test Locstr</button>
+        <button type="button" onclick="testLocStr()">Test Locstr</button>
     </div>
 
     <div>
@@ -74,6 +74,8 @@ function shoHid(drpId){
 }
 
 function testLocStr(){
+    //convert to int then add 1
+    localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
     document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 }
 
