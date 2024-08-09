@@ -33,7 +33,7 @@
             <form action="/action_page.php">
                 <label for="badminton">Badminton Poles</label>
                 <button type="button">+</button>
-                <!-- display value of a variable here-->
+                <p id="bmn_pl" style="display:inline-block"></p>
                 <button type="button">-</button>
             </form> 
             <br>
@@ -76,7 +76,7 @@ function shoHid(drpId){
 
 function testLocStr(){
     document.getElementById("teest").innerHTML = localStorage.getItem("locStr");
-    document.getElementById("bmn_nt").innerHTML = "fxn works";
+    document.getElementById("bmn_pl").innerHTML = "fxn works";
 }
 
 //FIX: still doesn't save changes when navigates to new page
