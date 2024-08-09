@@ -74,11 +74,13 @@ function shoHid(drpId){
     }
 }
 
+//if still doesn't work, test to make sure is getting into fxn
 function testLocStr(){
     //ALT: get val from element w/ ID bmn_pl and set locStr to that val + 1
+    localStorage.setItem("badPol") = document.getElementById("bmn_pl");
     //convert to int then add 1
     //change js badPol to 1 on the off chance that that's the issue?
-    localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
+    //localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
     document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 }
 
