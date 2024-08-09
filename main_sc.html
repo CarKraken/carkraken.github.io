@@ -9,7 +9,6 @@
     <div>
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
-        <p id="teest" style="display:inline-block">starting text</p>
         <button type="button" onclick="testLocStr()" style="display:inline-block">Test Locstr</button>
     </div>
 
@@ -75,13 +74,7 @@ function shoHid(drpId){
 }
 
 function testLocStr(){
-    //two things i cant get to work
-    document.getElementById("teest").innerHTML = localStorage.getItem("locStr");
-    document.getElementById("bmn_pl").innerHTML = "fxn works";
-
-    //two things i know work
-    allEquipmentTypesArray.BadmintonNet++;
-    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+    document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 }
 
 //FIX: still doesn't save changes when navigates to new page
@@ -117,8 +110,6 @@ function saveCompleteLog(){
 
 //see sepFil for array of equipment
 
-
-document.getElementById("bmn_pl").innerHTML = "fxn doesn't work";
 
 //if doesn't work, try allEquipmentTypesArray.BadmintonNet[]
 //code to initially display js variables in html
