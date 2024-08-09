@@ -9,6 +9,8 @@
     <div>
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
+        <p id="teest"></p>
+        <button type="button" onclick="testLocStr()" style="display:inline-block">Test Locstr</button>
     </div>
 
     <div>
@@ -70,6 +72,10 @@ function shoHid(drpId){
         //sets div to hidden
         plchold.style.display = "none";
     }
+}
+
+function testLocStr(){
+    document.getElementById("teest").innerHTML=localStorage.getItem("locStr");
 }
 
 //FIX: still doesn't save changes when navigates to new page
