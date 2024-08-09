@@ -10,7 +10,7 @@
         <!--have "save log" buttons here!-->
         <a href="newFil.html">Click here to select LPF Location</a>
         <button type="button" onclick="testLocStr()">Test Locstr</button>
-        <p>Did I update?: 1</p>
+        <p>Did I update?: 2</p>
     </div>
 
     <div>
@@ -77,10 +77,10 @@ function shoHid(drpId){
 function testLocStr(){
     //convert to int then add 1
     //localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
-    document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
+    //FIX: not working
+    //document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 }
 
-//FIX: still doesn't save changes when navigates to new page
 //need a function for each equipment type??
 function incValBmNet(){
     allEquipmentTypesArray.BadmintonNet++;
@@ -113,6 +113,9 @@ function saveCompleteLog(){
 
 //see sepFil for array of equipment
 
+
+//check to make sure getItem from js is working
+document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 
 //if doesn't work, try allEquipmentTypesArray.BadmintonNet[]
 //code to initially display js variables in html
