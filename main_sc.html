@@ -85,6 +85,7 @@ window.onbeforeunload = confirmExit;
 function confirmExit()
 {
     if (needToConfirm){
+        //are you sure box pops up, but this msg isn't there
         return "Please save the log as either finished or unfinished before leaving this page.";
     }
 }
