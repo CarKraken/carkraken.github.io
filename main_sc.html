@@ -94,11 +94,13 @@ function confirmExit()
 //FIX: isn't getting into fxn
 function testLocStor(){
     //test: button should +1 both equipment types
-    allEquipmentTypesArray.BadmintonNet++;
+    //allEquipmentTypesArray.BadmintonNet++;
     //document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
     //tests parseInt
     //document.getElementById("bmn_nt").innerHTML = parseInt(getElementById("bmn_nt")) + 1;
-    document.getElementById("itWorks").innerHTML = parseInt("56");
+
+    //testing parseInt
+    document.getElementById("itWorks").innerHTML = parseInt(getElementById("itWorks"));
 
     //ALT: get val from element w/ ID bmn_pl and set locStr to that val + 1
     localStorage.setItem("badPol") = parseInt(document.getElementById("bmn_pl")) + 1;
