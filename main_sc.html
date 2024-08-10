@@ -82,7 +82,7 @@ function shoHid(drpId){
 var needToConfirm = true;
 
 //test w/ confirmExit()
-window.onbeforeunload = confirmExit();
+window.onbeforeunload = confirmExit;
 function confirmExit(){
     if (needToConfirm){
         //box pops up, but this msg isn't there
@@ -92,21 +92,14 @@ function confirmExit(){
 
 //FIX: isn't getting into fxn
 function testLocStor(){
-    //test: button should +1 both equipment types
-    //allEquipmentTypesArray.BadmintonNet++;
-    //document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
-    //tests parseInt
-    //document.getElementById("bmn_nt").innerHTML = 1 + parseInt(getElementById("bmn_nt"));
-
-    //ALT: get val from element w/ ID bmn_pl and set locStr to that val + 1
-    localStorage.setItem("badPol") = 1 + parseInt(document.getElementById("bmn_pl"));
-    //converts to int then add 1
-    //localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
-    document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
+    //ALT:
+    //localStorage.setItem("badPol") = 1 + parseInt(document.getElementById("bmn_pl"));
+    //localStorage.setItem("badPol") = 1 + parseInt(localStorage.getItem("badPol"));
+    //document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
 
     //ALT: following 2 lines
-    //document.getElementById("bmn_pl").innerHTML = parseInt(localStorage.getItem("badPol")) + 1
-    // localStorage.setItem("badPol") = getElementById("bmn_pl")
+    document.getElementById("bmn_pl").innerHTML = parseInt(localStorage.getItem("badPol")) + 1;
+    localStorage.setItem("badPol") = getElementById("bmn_pl");
 }
 
 //need a function for each equipment type??
