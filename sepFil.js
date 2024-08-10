@@ -20,7 +20,7 @@ function testLocStor(){
 
     //ALT: following 2 lines
     //works 1x, but it seems like badPool isn't incrementing past 0
-    localStorage.getItem("badPol")++;
+    localStorage.setItem("badPol") = 1 + localStorage.getItem("badPol");
     document.getElementById("bmn_pl").innerHTML = parseInt(localStorage.getItem("badPol"));
     //localStorage.setItem("badPol") = getElementById("bmn_pl");
 }
