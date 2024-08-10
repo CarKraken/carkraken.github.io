@@ -35,7 +35,6 @@
                 <label for="badminton">Badminton Poles</label>
                 <button type="button" onclick="testLocStor()">Test Locstr</button>
                 <p>Did I update?: 4</p>
-                <p id="itWorks">56 oh boy it works</p>
                 <button type="button">-</button>
                 <p id="bmn_pl" style="display:inline-block"></p>
                 <button type="button">+</button>
@@ -82,11 +81,11 @@ function shoHid(drpId){
 //set needToConfirm to false when user saves log (should also reset all variables in local storage)
 var needToConfirm = true;
 
-window.onbeforeunload = confirmExit;
-function confirmExit()
-{
+//test w/ confirmExit()
+window.onbeforeunload = confirmExit();
+function confirmExit(){
     if (needToConfirm){
-        //are you sure box pops up, but this msg isn't there
+        //box pops up, but this msg isn't there
         return "Please save the log as either finished or unfinished before leaving this page.";
     }
 }
@@ -97,17 +96,17 @@ function testLocStor(){
     //allEquipmentTypesArray.BadmintonNet++;
     //document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
     //tests parseInt
-    //document.getElementById("bmn_nt").innerHTML = parseInt(getElementById("bmn_nt")) + 1;
-
-    //testing parseInt
-    document.getElementById("itWorks").innerHTML = 1 + parseInt("56 hh");
+    //document.getElementById("bmn_nt").innerHTML = 1 + parseInt(getElementById("bmn_nt"));
 
     //ALT: get val from element w/ ID bmn_pl and set locStr to that val + 1
-    localStorage.setItem("badPol") = parseInt(document.getElementById("bmn_pl")) + 1;
-    //convert to int then add 1
-    //change js badPol to 1 on the off chance that that's the issue?
+    localStorage.setItem("badPol") = 1 + parseInt(document.getElementById("bmn_pl"));
+    //converts to int then add 1
     //localStorage.setItem("badPol") = parseInt(localStorage.getItem("badPol")) + 1;
     document.getElementById("bmn_pl").innerHTML = localStorage.getItem("badPol");
+
+    //ALT: following 2 lines
+    //document.getElementById("bmn_pl").innerHTML = parseInt(localStorage.getItem("badPol")) + 1
+    // localStorage.setItem("badPol") = getElementById("bmn_pl")
 }
 
 //need a function for each equipment type??
