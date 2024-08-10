@@ -94,7 +94,9 @@ function confirmExit()
 function testLocStor(){
     //test: button should +1 both equipment types
     allEquipmentTypesArray.BadmintonNet++;
-    document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+    //document.getElementById("bmn_nt").innerHTML = allEquipmentTypesArray.BadmintonNet;
+    //tests parseInt
+    document.getElementById("bmn_nt").innerHTML = parseInt(getElementById("bmn_nt")) + 1;
 
     //ALT: get val from element w/ ID bmn_pl and set locStr to that val + 1
     localStorage.setItem("badPol") = parseInt(document.getElementById("bmn_pl")) + 1;
